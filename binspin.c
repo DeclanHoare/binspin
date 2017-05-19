@@ -36,10 +36,8 @@ int main(void)
 				obuffer[x] = obuffer[x] ^ tmp;
 			}
 		}
-		for (i = 0; i < 8; i++)
-			putchar(obuffer[i]);
+		fwrite(obuffer, 1, 8, stdout);
 	}
-	for (i = 0; i < bytes; i++)
-		putchar(ibuffer[i]);
+	fwrite(ibuffer, 1, bytes, stdout);
 	return 0;
 }
